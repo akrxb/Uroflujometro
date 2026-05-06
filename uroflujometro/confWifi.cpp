@@ -1,18 +1,19 @@
 #include "confWifi.h"
 
 
-const char* ssid = "diavluras";
-const char* password = "pedrito.";
+const char* ssid = "ssid";
+const char* password = "password.";
 
 WiFiUDP udp;
-const int puerto_remoto = 9000;
+const int puerto_remoto = 9000; // por predeterminado
 
+//ajustar según IP de tu hotspot
 IPAddress local_IP(10, 173, 46, 100);
 IPAddress gateway(10, 173, 46, 1);   
 IPAddress subnet(255, 255, 255, 0);
 IPAddress primaryDNS(8, 8, 8, 8);  
 
-const char* ip_remota = "10.173.46.204"; 
+const char* ip_remota = "ip_de_tu_pc_conectado_a_hotspot"; 
 
 
 void iniciarWifi(const char* ssid, const char* password){
